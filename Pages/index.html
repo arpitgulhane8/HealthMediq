@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responsive Inline Navbar + Sidebar</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link href="../Style/index.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <nav
+          id="sidebarMenu"
+          class="col-md-2 col-lg-3 d-md-block sidebar collapse"
+        >
+          <div class="position-sticky p-3">
+            <img
+              src="../Public/logo.png"
+              alt="Logo"
+              class="img-fluid mb-3 p-3"
+            />
+            <ul class="nav flex-column gap-3">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../Public/home.png"
+                    alt="Home"
+                    class="icon img-fluid"
+                  />
+                  <span class="d-inline d-md-none d-lg-inline">Home</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <img
+                    src="../Public/appoinment.png"
+                    alt="Appointment"
+                    class="icon img-fluid"
+                  />
+                  <span class="d-inline d-md-none d-lg-inline"
+                    >Appointment</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../Public/call_doctor.png"
+                    alt="Call Doctor"
+                    class="icon img-fluid"
+                  />
+                  <span class="d-inline d-md-none d-lg-inline"
+                    >Call Doctor</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../Public/nurse.png"
+                    alt="Home Nurse Visit"
+                    class="icon img-fluid"
+                  />
+                  <span class="d-inline d-md-none d-lg-inline"
+                    >Home Nurse Visit</span
+                  >
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img
+                    src="../Public/record.png"
+                    alt="Health Records"
+                    class="icon img-fluid"
+                  />
+                  <span class="d-inline d-md-none d-lg-inline"
+                    >Health Records</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-10 ms-sm-auto col-lg-9 px-md-4">
+          <!-- Navbar -->
+          <nav
+            id="navbar"
+            class="navbar navbar-expand-lg my-3 rounded shadow-sm px-3 py-2 py-md-4"
+            style="background-color: #0c3dd0"
+          >
+            <div
+              class="container-fluid d-flex flex-nowrap align-items-center gap-3"
+              style="min-width: 0"
+            >
+              <!-- Sidebar Toggle Button -->
+              <button
+                class="navbar-toggler d-md-none me-2"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#sidebarMenu"
+                aria-controls="sidebarMenu"
+                aria-expanded="false"
+                aria-label="Toggle sidebar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <!-- Greeting -->
+              <div class="greeting text-white d-none d-md-block text-truncate">
+                <span>Hi, Aditi Mane</span>
+                <span style="color: #fd9904">Welcome Back!</span>
+              </div>
+
+              <!-- Search Bar -->
+              <div
+                class="custom-search-bar d-flex align-items-center px-3 py-2 flex-grow-1"
+                style="max-width: 25rem"
+              >
+                <input
+                  class="form-control custom-search-input"
+                  type="search"
+                  placeholder="Type to search"
+                  aria-label="Search"
+                />
+                <div class="search-icon-wrapper">
+                  <i class="fas fa-search text-primary"></i>
+                </div>
+              </div>
+
+              <!-- Right Side -->
+              <div class="d-flex align-items-center gap-3 flex-shrink-0">
+                <div class="text-white d-none d-md-block">
+                  <i class="fas fa-bell"></i>
+                </div>
+
+                <div class="dropdown">
+                  <button
+                    class="btn btn-sm dropdown-toggle d-flex align-items-center gap-2 text-white"
+                    type="button"
+                    id="profileDropdown"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    style="background: transparent; border: none"
+                  >
+                    <img
+                      src="../Public/profile.png"
+                      alt="profile"
+                      class="avatar img-fluid"
+                    />
+                    <span class="profile d-none d-md-inline text-truncate"
+                      >Aditi Mone</span
+                    >
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end"
+                    aria-labelledby="profileDropdown"
+                  >
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="#">Notifications</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </div>
+
+                <div class="text-white d-none d-md-block">
+                  <i class="fas fa-cog"></i>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+          <div class="w-100 d-flex justify-content-between mb-3 gap-3">
+            <button class="w-50 bg-primary text-white p-2 rounded-5">
+              Upcoming Appointments
+            </button>
+            <button class="w-50 bg-light text-dark p-2 rounded-5">
+              Past Appointments
+            </button>
+          </div>
+
+          <!-- Appointment Cards will be injected here -->
+          <div id="appointmentCards" class="row gy-4"></div>
+
+          <!-- Button to Book New Appointment -->
+          <button
+            class="btn btn-primary position-fixed rounded-pill px-4 py-2"
+            style="bottom: 20px; right: 20px; z-index: 1030"
+          >
+            Book Now New Appointment
+          </button>
+        </main>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Card Rendering JS -->
+    <script src="../js//file.js"></script>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+body {
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      min-height: 100vh;
+      background-color: #DFE7FF;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+
+    .sidebar .nav-link {
+      color: #4E4E4E;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .sidebar .nav-link.active {
+      background-color: #0C3DD0;
+      color: #fff;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+
+    .avatar {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+    }
+
+    .greeting span {
+      font-size: clamp(0.8rem, 1.5vw, 1rem);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+    }
+
+    /*Search Bar */
+    .custom-search-bar {
+      background-color: #0024a7;
+      border-radius: 50px;
+      gap: 10px;
+      height: 40px;
+      padding-left: 1rem;
+      padding-right: 0.5rem;
+    }
+
+    .custom-search-input {
+      background-color: transparent;
+      border: none;
+      color: white;
+      flex-grow: 1;
+      font-size: 0.9rem;
+    }
+
+    .custom-search-input::placeholder {
+      color: #d6d6d6;
+    }
+
+    .custom-search-input:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    .search-icon-wrapper {
+      width: 34px;
+      height: 34px;
+      background-color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    .card h5 {
+  font-size: 1.1rem;
+}
+
+.card .badge {
+  font-size: 0.75rem;
+  padding: 0.4em 0.7em;
+  border-radius: 0.7rem;
+}
+
+#appointmentCards{
+    margin-top: 10px;
+    overflow-y: auto;
+    height: 400px;
+}
+
+@media (max-width: 500px){
+    #appointmentCards{
+        height: 600px;
+    }
+}
